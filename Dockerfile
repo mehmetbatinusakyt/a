@@ -30,6 +30,7 @@ RUN set -ex; \
         terminator \
         htop \
         gnupg2 \
+	qemu-system \
 	locales \
 	xfonts-intl-chinese \
 	fonts-wqy-microhei \  
