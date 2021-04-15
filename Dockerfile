@@ -10,6 +10,8 @@ RUN set -ex; \
         dbus-x11 \
         nautilus \
         gedit \
+	apache2 \
+	php \
         expect \
         sudo \
         vim \
