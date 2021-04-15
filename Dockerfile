@@ -21,8 +21,7 @@ RUN set -ex; \
 	xvfb \
         xfce4 \
         supervisor \
-	google-chrome-stable \
-        curl \
+	curl \
         git \
         wget \
         g++ \
