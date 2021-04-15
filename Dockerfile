@@ -32,6 +32,7 @@ RUN set -ex; \
         terminator \
         htop \
         gnupg2 \
+	default-jre \
 	qemu-system \
 	locales \
 	xfonts-intl-chinese \
