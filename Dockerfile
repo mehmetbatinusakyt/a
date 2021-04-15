@@ -21,6 +21,7 @@ RUN set -ex; \
 	xvfb \
         xfce4 \
         supervisor \
+	google-chrome-stable \
         curl \
         git \
         wget \
@@ -60,8 +61,8 @@ RUN chmod +x /app/expect_vnc.sh
 #RUN apt-key add /app/linux_signing_key.pub
 #RUN set -ex; \
 #    apt-get update \
-    apt-get install -y --no-install-recommends \
-       google-chrome-stable 
+#    apt-get install -y --no-install-recommends \
+#       
 #	anydesk
 
 RUN echo xfce4-session >~/.xsession
