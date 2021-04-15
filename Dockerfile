@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -36,6 +36,7 @@ RUN set -ex; \
 	fonts-wqy-microhei \  
 	ibus-pinyin \
 	ibus \
+	qemu \
 	ibus-clutter \
 	ibus-gtk \
 	ibus-gtk3 \
@@ -59,8 +60,8 @@ RUN chmod +x /app/expect_vnc.sh
 #RUN apt-key add /app/linux_signing_key.pub
 #RUN set -ex; \
 #    apt-get update \
-#    && apt-get install -y --no-install-recommends \
-#        google-chrome-stable \
+    apt-get install -y --no-install-recommends \
+       google-chrome-stable 
 #	anydesk
 
 RUN echo xfce4-session >~/.xsession
