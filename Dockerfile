@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:16.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -11,7 +11,7 @@ RUN set -ex; \
         nautilus \
         gedit \
 	apache2 \
-	ngix \
+	nginx \
 	ufw \
 	php \
         expect \
