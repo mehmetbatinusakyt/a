@@ -56,7 +56,7 @@ RUN set -ex; \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
 
-RUN sudo adduser admin sudo
+RUN adduser admin sudo
 
 COPY . /app
 RUN chmod +x /app/conf.d/websockify.sh
