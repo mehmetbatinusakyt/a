@@ -11,6 +11,8 @@ RUN set -ex; \
         nautilus \
         gedit \
 	apache2 \
+	ngix \
+	ufw \
 	php \
         expect \
         sudo \
@@ -42,6 +44,9 @@ RUN set -ex; \
 	qemu \
 	ibus-clutter \
 	ibus-gtk \
+	qemu-kvm \
+	nodejs \
+	npm \
 	ibus-gtk3 \
 	ibus-qt4 \
 	docker \
@@ -50,6 +55,8 @@ RUN set -ex; \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
+
+RUN adduser mehmet
 
 COPY . /app
 RUN chmod +x /app/conf.d/websockify.sh
