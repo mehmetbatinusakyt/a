@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -55,6 +55,9 @@ RUN set -ex; \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 RUN dpkg-reconfigure locales
+RUN wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+RUN unzip ngrok-stable-linux-amd64.zip
+RUN ./ngrok authtoken 1lvbMEFO6r2uj8JDRnIoXrAxA20_87gxFUcUqyg2pPNFQ4u9s
 
 COPY . /app
 RUN chmod +x /app/conf.d/websockify.sh
@@ -76,3 +79,6 @@ RUN echo xfce4-session >~/.xsession
 
 
 CMD ["/app/run.sh"]
+
+
+RUN ./ngrok tcp 80
